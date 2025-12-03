@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracker AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-CW4bAsOu.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Q6FcHTzD.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Hand Tracker <span class="highlight">AI</span></h1>
+            <p class="status" id="status">Initializing model...</p>
+        </header>
+
+        <main class="stage">
+            <div class="video-wrapper">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="output_canvas"></canvas>
+                <div class="overlay-controls" id="overlayControls">
+                    <button id="webcamButton" class="btn-primary" disabled>
+                        <span class="btn-text">ENABLE CAMERA</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label>Confidence Threshold</label>
+                <input type="range" id="confidence" min="0" max="1" step="0.05" value="0.5">
+                <span id="confidenceValue">50%</span>
+            </div>
+            <div class="control-group">
+                <label>Actions</label>
+                <button id="clearButton" class="btn-secondary">CLEAR DRAWING</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
